@@ -11,7 +11,7 @@ let listenerFunction = function() {
 			badgeText = chrome.i18n.getMessage("block");
 		}
 		chrome.action.setBadgeText({text: badgeText});
-		let tooltipText = chrome.i18n.getMessage("actionTitle") + chrome.i18n.getMessage("currentSetting") + " " + badgeText;
+		let tooltipText = chrome.i18n.getMessage("actionTitle") + " " + chrome.i18n.getMessage("currentSetting") + " " + badgeText;
 		chrome.action.setTitle({title: tooltipText});
 	})
 };
@@ -40,6 +40,6 @@ chrome.privacy.websites.thirdPartyCookiesAllowed.onChange.addListener(function (
 	else
 		badgeText = chrome.i18n.getMessage("block");
 	chrome.action.setBadgeText({text: badgeText});
-	let tooltipText = chrome.i18n.getMessage("actionTitle") + chrome.i18n.getMessage("currentSetting") + " " + badgeText;
+	let tooltipText = chrome.i18n.getMessage("actionTitle") + " " + chrome.i18n.getMessage("currentSetting") + " " + badgeText;
 	chrome.action.setTitle({title: tooltipText});
 });
