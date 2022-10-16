@@ -1,0 +1,19 @@
+{
+  "name": "Toggle 3rd Party Cookies",
+  "version": "1.1",
+  "description": "Toggle the setting 'Block 3rd Party Cookies'",
+  "permissions": ["privacy", "notifications"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Toggle the option 'Block 3rd Party Cookies' on and off"
+  },
+  "icons": {
+    "16": "images/cookie16.png",
+    "32": "images/cookie32.png",
+    "48": "images/cookie48.png",
+    "128": "images/cookie128.png"
+  },
+  "manifest_version": 3
+}
