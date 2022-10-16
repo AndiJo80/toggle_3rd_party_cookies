@@ -1,16 +1,23 @@
 'use strict';
 
-chrome.runtime.onInstalled.addListener(function() {
+let listenerFunction = function() {
 	chrome.privacy.websites.thirdPartyCookiesAllowed.get({}, function(details) {
+		let badgeText = "";
 		if (details.value) {
 			console.log('thirdPartyCookiesAllowed is on!');
-			chrome.action.setBadgeText({text: chrome.i18n.getMessage("allow")});
+			badgeText = chrome.i18n.getMessage("allow");
 		} else {
 			console.log('thirdPartyCookiesAllowed is off!');
-			chrome.action.setBadgeText({text: chrome.i18n.getMessage("block")});
+			badgeText = chrome.i18n.getMessage("block");
 		}
-	});
-});
+		chrome.action.setBadgeText({text: badgeText});
+		let tooltipText = chrome.i18n.getMessage("actionTitle") + chrome.i18n.getMessage("currentSetting") + " " + badgeText;
+		chrome.action.setTitle({title: tooltipText});
+	})
+};
+
+chrome.runtime.onInstalled.addListener(listenerFunction);
+chrome.runtime.onStartup.addListener(listenerFunction);
 
 chrome.action.onClicked.addListener(function(tab) {
 	chrome.privacy.websites.thirdPartyCookiesAllowed.get({}, function(details) {
@@ -27,8 +34,12 @@ chrome.action.onClicked.addListener(function(tab) {
 });
 
 chrome.privacy.websites.thirdPartyCookiesAllowed.onChange.addListener(function (details) {
+	let badgeText = "";
 	if (details.value)
-		chrome.action.setBadgeText({text: chrome.i18n.getMessage("allow")});
+		badgeText = chrome.i18n.getMessage("allow");
 	else
-		chrome.action.setBadgeText({text: chrome.i18n.getMessage("block")});
+		badgeText = chrome.i18n.getMessage("block");
+	chrome.action.setBadgeText({text: badgeText});
+	let tooltipText = chrome.i18n.getMessage("actionTitle") + chrome.i18n.getMessage("currentSetting") + " " + badgeText;
+	chrome.action.setTitle({title: tooltipText});
 });

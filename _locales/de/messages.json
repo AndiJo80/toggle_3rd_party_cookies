@@ -10,10 +10,13 @@
   "actionTitle": {
     "message": "Schalte die Cookie-Option 'Drittanbieter-Cookies blockieren' an oder aus."
   },
+  "currentSetting": {
+    "message": "Aktuelle Einstellung:"
+  },
   "allow": {
-    "message": "Erlauben"
+    "message": "erlaubt"
   },
   "block": {
-    "message": "Blockiert"
+    "message": "blockiert"
   }
 }
