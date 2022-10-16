@@ -1,13 +1,14 @@
 {
-  "name": "Toggle 3rd Party Cookies",
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "default_locale": "en",
   "version": "1.1",
-  "description": "Toggle the setting 'Block 3rd Party Cookies'",
   "permissions": ["privacy", "notifications"],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Toggle the option 'Block 3rd Party Cookies' on and off"
+    "default_title": "__MSG_actionTitle__"
   },
   "icons": {
     "16": "images/cookie16.png",

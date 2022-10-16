@@ -1,0 +1,19 @@
+{
+  "appName": {
+    "message": "Toggle 3rd Party Cookies",
+    "description": "Toggle the setting 'Block 3rd Party Cookies'"
+  },
+  "appDesc": {
+    "message": "Toggle the setting 'Block 3rd Party Cookies'",
+    "description": "This extension toggles the setting 'Block 3rd Party Cookies' between 'Allow' and 'Block'."
+  },
+  "actionTitle": {
+    "message": "Toggle the option 'Block 3rd Party Cookies' on and off"
+  },
+  "allow": {
+    "message": "Allow"
+  },
+  "block": {
+    "message": "Block"
+  }
+}

@@ -4,10 +4,10 @@ chrome.runtime.onInstalled.addListener(function() {
 	chrome.privacy.websites.thirdPartyCookiesAllowed.get({}, function(details) {
 		if (details.value) {
 			console.log('thirdPartyCookiesAllowed is on!');
-			chrome.action.setBadgeText({text: 'Allow'});
+			chrome.action.setBadgeText({text: chrome.i18n.getMessage("allow")});
 		} else {
 			console.log('thirdPartyCookiesAllowed is off!');
-			chrome.action.setBadgeText({text: 'Block'});
+			chrome.action.setBadgeText({text: chrome.i18n.getMessage("block")});
 		}
 	});
 });
@@ -28,7 +28,7 @@ chrome.action.onClicked.addListener(function(tab) {
 
 chrome.privacy.websites.thirdPartyCookiesAllowed.onChange.addListener(function (details) {
 	if (details.value)
-		chrome.action.setBadgeText({text: 'Allow'});
+		chrome.action.setBadgeText({text: chrome.i18n.getMessage("allow")});
 	else
-		chrome.action.setBadgeText({text: 'Block'});
+		chrome.action.setBadgeText({text: chrome.i18n.getMessage("block")});
 });

@@ -1,0 +1,19 @@
+{
+  "appName": {
+    "message": "Drittanbieter-Cookies blockieren",
+    "description": "Umschalten der Cookie-Einstellung für 'Drittanbieter-Cookies blockieren'"
+  },
+  "appDesc": {
+    "message": "Cookie-Einstellung 'Drittanbieter-Cookies blockieren' umschalten",
+    "description": "Die Erweiterung dient zum Umschalten der Cookie-Einstellungen zwischen 'Alle Cookies zulassen' und 'Drittanbieter-Cookies blockieren'."
+  },
+  "actionTitle": {
+    "message": "Schalte die Cookie-Option 'Drittanbieter-Cookies blockieren' an oder aus."
+  },
+  "allow": {
+    "message": "Erlauben"
+  },
+  "block": {
+    "message": "Blockiert"
+  }
+}
