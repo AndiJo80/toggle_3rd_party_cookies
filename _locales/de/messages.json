@@ -14,7 +14,7 @@
     "message": "Aktuelle Einstellung:"
   },
   "allow": {
-    "message": "erlaubt"
+    "message": "alle erlauben"
   },
   "block": {
     "message": "blockiert"
